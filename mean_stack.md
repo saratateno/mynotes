@@ -74,6 +74,19 @@ This creates the `wdio.conf.js` file which is similar to `spec_helper.rb`.
 
 Change the default browser to be `chrome`.
 
+In `Gruntfile.js` within ```grunt.initConfig``` add the following code, ensuring that ```configFile``` is set to the directory where your ```wdio.conf.js``` is located:
+
+```
+webdriver: {
+ test: {
+  configFile: './wdio.conf.js'
+  }
+ },
+```
+
+Also make sure you task is loaded by adding the following line to your Gruntfile:
+``` grunt.loadNpmTasks('grunt-webdriver');```
+
 If you have set up webdriver as a default Grunt task, you can run your tests by running `$ grunt`, otherwise `$ wdio wdio.conf.js`
 
 Fire it All Up
