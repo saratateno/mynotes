@@ -85,7 +85,9 @@ webdriver: {
 ```
 
 Also make sure you task is loaded by adding the following line to your Gruntfile:
-``` grunt.loadNpmTasks('grunt-webdriver');```
+```
+grunt.loadNpmTasks('grunt-webdriver');
+```
 
 If you have set up webdriver as a default Grunt task, you can run your tests by running `$ grunt`, otherwise `$ wdio wdio.conf.js`
 
